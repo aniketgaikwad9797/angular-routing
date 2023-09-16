@@ -19,7 +19,7 @@ const applicationRoutes: Routes = [
     component: HomeComponent,
   },
   { path: 'users', component: UsersComponent },
-  { path: 'users/:userId', component: UsersComponent },
+  { path: 'users/:userId', component: UserComponent },
   { path: 'servers', component: ServersComponent },
 ];
 
