@@ -10,7 +10,7 @@ export class UserComponent implements OnInit {
   user: { id: number; name: string };
 
   constructor(private route: ActivatedRoute) {}
-
+  //not reactively
   ngOnInit() {
     this.user = {
       id: this.route.snapshot.params.userId,
