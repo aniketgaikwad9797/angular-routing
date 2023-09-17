@@ -3,8 +3,10 @@
     <div class="list-group">
       <a
         href="#"
+        [routerLink]="['/users', user.id, user.name]"
         class="list-group-item"
-        *ngFor="let user of users">
+        *ngFor="let user of users"
+      >
         {{ user.name }}
       </a>
     </div>
@@ -13,5 +15,3 @@
     <app-user></app-user>
   </div>
 </div>
-
-
