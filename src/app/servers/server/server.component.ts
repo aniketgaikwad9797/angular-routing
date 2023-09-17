@@ -26,6 +26,6 @@ export class ServerComponent implements OnInit {
   }
 
   onEditServer() {
-    this.router.navigate(['/servers', this.server.id, 'edit']);
+    this.router.navigate(['edit'], { relativeTo: this.route });
   }
 }
