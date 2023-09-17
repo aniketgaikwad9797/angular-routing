@@ -18,11 +18,19 @@ const applicationRoutes: Routes = [
     path: '',
     component: HomeComponent,
   },
-  { path: 'users', component: UsersComponent },
-  { path: 'users/:userId/:userName', component: UserComponent },
-  { path: 'servers', component: ServersComponent },
-  { path: 'servers/:serverId', component: ServerComponent },
-  { path: 'servers/:id/edit', component: EditServerComponent },
+  {
+    path: 'users',
+    component: UsersComponent,
+    children: [{ path: ':userId/:userName', component: UserComponent }],
+  },
+  {
+    path: 'servers',
+    component: ServersComponent,
+    children: [
+      { path: ':serverId', component: ServerComponent },
+      { path: ':id/edit', component: EditServerComponent },
+    ],
+  },
 ];
 
 @NgModule({
