@@ -25,7 +25,7 @@ export class EditServerComponent implements OnInit {
     console.log(this.route.snapshot.fragment);
     //2nd way of retreiving data
     this.route.queryParams.subscribe((queryParams: Params) => {
-      this.allowEdit = queryParams.allowEdit;
+      this.allowEdit = queryParams.editMode === 'true' ? true : false;
     });
     this.route.fragment.subscribe();
     //console.log(this.route.snapshot.params);
